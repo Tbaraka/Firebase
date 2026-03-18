@@ -12,32 +12,29 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"/>
-    <!-- Edit text for email -->
+        android:text="Register"
+        />
     <EditText
-        android:id="@+id/emaillogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your Email" />
-    <!-- Edit text for password -->
+        android:id="@+id/email"
+        android:hint="Enter your email"/>
     <EditText
-        android:id="@+id/passwordlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your Password"
-        android:inputType="textPassword" />
-    <!-- Button for Login with text "Login" -->
+        android:id="@+id/password"
+        android:hint="Enter your password"/>
     <Button
-        android:id="@+id/Buttonlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
-    <!-- ProgressBar for Loading Time -->
-    <ProgressBar
-        android:id="@+id/progressBarLogin"
+        android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
-
+        android:id="@+id/registerbtn"
+        />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
 
 </LinearLayout>
