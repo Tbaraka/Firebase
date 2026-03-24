@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase">
         <activity
+            android:name=".dashboard"
+            android:exported="false" />
+        <activity
             android:name=".login"
             android:exported="false" />
         <activity
