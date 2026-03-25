@@ -74,7 +74,8 @@ public class login extends AppCompatActivity {
                 progressbarLogin.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(login.this, MainActivity.class);
+                    // Redirect to dashboard activity
+                    Intent intent = new Intent(login.this, dashboard.class);
                     startActivity(intent);
                     finish();
                 } else {
