@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,7 @@ public class login extends AppCompatActivity {
     private Button loginButton;
     private ProgressBar progressbarLogin;
     private FirebaseAuth loginAuth;
+    private TextView textViewSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +44,21 @@ public class login extends AppCompatActivity {
         loginpassword = findViewById(R.id.loginpassword);
         loginButton = findViewById(R.id.buttonlogin);
         progressbarLogin = findViewById(R.id.progressBarLogin);
+        textViewSignup = findViewById(R.id.textViewSignup);
         loginAuth = FirebaseAuth.getInstance();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginnewuser();
+            }
+        });
+
+        textViewSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, signup.class);
+                startActivity(intent);
             }
         });
     }
