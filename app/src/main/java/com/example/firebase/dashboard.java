@@ -2,7 +2,6 @@ package com.example.firebase;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,8 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class dashboard extends AppCompatActivity {
-    private EditText ItemNameform, Descriptionform, Locationform, Contactform;
-    private Button btnSaveform;
+    private EditText fullNameForm, phoneNumberForm, locationForm, contactForm;
+    private Button btnBookWash;
     private FirebaseFirestore db;
 
     @Override
@@ -25,72 +24,71 @@ public class dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dashboard);
+        
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        ItemNameform = findViewById(R.id.ItemNamelost);
-        Descriptionform = findViewById(R.id.Descriptionlost);
-        Locationform = findViewById(R.id.Locationlost);
-        Contactform = findViewById(R.id.Contactlost);
-        btnSaveform = findViewById(R.id.btn_save_lost);
+        // Initialize views with the new IDs from activity_dashboard.xml
+        fullNameForm = findViewById(R.id.FullName);
+        phoneNumberForm = findViewById(R.id.PhoneNumber);
+        locationForm = findViewById(R.id.Location);
+        contactForm = findViewById(R.id.Contactlost);
+        btnBookWash = findViewById(R.id.btn_save_lost);
 
         db = FirebaseFirestore.getInstance();
-        btnSaveform.setOnClickListener(v -> saveitem());
+        btnBookWash.setOnClickListener(v -> saveBooking());
     }
 
-    private void saveitem() {
-        String itemname = ItemNameform.getText().toString().trim();
-        String description = Descriptionform.getText().toString().trim();
-        String location = Locationform.getText().toString().trim();
-        String contact = Contactform.getText().toString().trim();
+    private void saveBooking() {
+        String fullName = fullNameForm.getText().toString().trim();
+        String phoneNumber = phoneNumberForm.getText().toString().trim();
+        String location = locationForm.getText().toString().trim();
+        String contact = contactForm.getText().toString().trim();
 
-        if (TextUtils.isEmpty(itemname)) {
-            ItemNameform.setError("Item name is required");
-            ItemNameform.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(description)) {
-            Descriptionform.setError("Description is required");
-            Descriptionform.requestFocus();
+        // Validation
+        if (TextUtils.isEmpty(fullName)) {
+            fullNameForm.setError("Full Name is required");
+            fullNameForm.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(location)) {
-            Locationform.setError("Location is required");
-            Locationform.requestFocus();
+            locationForm.setError("Location is required");
+            locationForm.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(contact)) {
-            Contactform.setError("Contact is required");
-            Contactform.requestFocus();
+            contactForm.setError("Contact is required");
+            contactForm.requestFocus();
             return;
         }
 
-        LostItem item = new LostItem(
-                itemname,
-                description,
+        // Using LostItem class to map the data (ItemName -> FullName, Description -> PhoneNumber)
+        LostItem booking = new LostItem(
+                fullName,
+                phoneNumber,
                 location,
                 contact,
-                "lost"
+                "pending_wash"
         );
 
-        db.collection("LostItems")
-                .add(item)
+        db.collection("WashBookings")
+                .add(booking)
                 .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(this, "Item Saved Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Wash Booked Successfully", Toast.LENGTH_SHORT).show();
                     clearFields();
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Error Saving Item: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Error Booking Wash: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
 
     private void clearFields() {
-        ItemNameform.setText("");
-        Descriptionform.setText("");
-        Locationform.setText("");
-        Contactform.setText("");
+        fullNameForm.setText("");
+        phoneNumberForm.setText("");
+        locationForm.setText("");
+        contactForm.setText("");
     }
 }

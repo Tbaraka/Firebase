@@ -23,25 +23,25 @@
             android:layout_marginBottom="24dp"/>
 
         <EditText
-            android:id="@+id/ItemNamelost"
+            android:id="@+id/FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Item Name"
+            android:hint="Full Name (Required)"
             android:inputType="text"/>
 
         <EditText
-            android:id="@+id/Descriptionlost"
+            android:id="@+id/PhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
+            android:hint="Phone Number (Optional)"
             android:inputType="textMultiLine"
             android:layout_marginTop="12dp"/>
 
         <EditText
-            android:id="@+id/Locationlost"
+            android:id="@+id/Location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location Lost"
+            android:hint="PickUp Address/Location"
             android:layout_marginTop="12dp"
             android:inputType="text"/>
 
@@ -57,7 +57,7 @@
             android:id="@+id/btn_save_lost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Item"
+            android:text="Book Your Wash "
             android:layout_marginTop="24dp"/>
 
     </LinearLayout>
