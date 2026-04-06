@@ -33,9 +33,9 @@
             android:id="@+id/PhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Phone Number (Optional)"
-            android:inputType="textMultiLine"
-            android:layout_marginTop="12dp"/>
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/Location"
@@ -46,15 +46,15 @@
             android:inputType="text"/>
 
         <EditText
-            android:id="@+id/Contactlost"
+            android:id="@+id/pickuptime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contact"
             android:layout_marginTop="12dp"
-            android:inputType="phone"/>
+            android:hint="prefered pickuptime "
+            android:inputType="datetime" />
 
         <Button
-            android:id="@+id/btn_save_lost"
+            android:id="@+id/bookyourwash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Book Your Wash "

@@ -35,8 +35,8 @@ public class dashboard extends AppCompatActivity {
         fullNameForm = findViewById(R.id.FullName);
         phoneNumberForm = findViewById(R.id.PhoneNumber);
         locationForm = findViewById(R.id.Location);
-        contactForm = findViewById(R.id.Contactlost);
-        btnBookWash = findViewById(R.id.btn_save_lost);
+        contactForm = findViewById(R.id.pickuptime);
+        btnBookWash = findViewById(R.id.bookyourwash);
 
         db = FirebaseFirestore.getInstance();
         btnBookWash.setOnClickListener(v -> saveBooking());

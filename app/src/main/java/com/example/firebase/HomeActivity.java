@@ -24,9 +24,9 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
-        CardView cardReportLost = findViewById(R.id.cardReportLost);
+        CardView cardScheduleWash = findViewById(R.id.cardScheduleWash);
 
-        cardReportLost.setOnClickListener(new View.OnClickListener() {
+        cardScheduleWash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, dashboard.class);
