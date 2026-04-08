@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class dashboard extends AppCompatActivity {
-    private EditText fullNameForm, phoneNumberForm, locationForm, contactForm;
+    private EditText fullNameForm, phoneNumberForm, locationForm, pickUpTimeForm, instructionsForm;
     private Button btnBookWash;
     private FirebaseFirestore db;
 
@@ -35,7 +35,8 @@ public class dashboard extends AppCompatActivity {
         fullNameForm = findViewById(R.id.FullName);
         phoneNumberForm = findViewById(R.id.PhoneNumber);
         locationForm = findViewById(R.id.Location);
-        contactForm = findViewById(R.id.pickuptime);
+        pickUpTimeForm = findViewById(R.id.pickuptime);
+        instructionsForm = findViewById(R.id.instructions);
         btnBookWash = findViewById(R.id.bookyourwash);
 
         db = FirebaseFirestore.getInstance();
@@ -46,7 +47,8 @@ public class dashboard extends AppCompatActivity {
         String fullName = fullNameForm.getText().toString().trim();
         String phoneNumber = phoneNumberForm.getText().toString().trim();
         String location = locationForm.getText().toString().trim();
-        String contact = contactForm.getText().toString().trim();
+        String pickUpTime = pickUpTimeForm.getText().toString().trim();
+        String instructions = instructionsForm.getText().toString().trim();
 
         // Validation
         if (TextUtils.isEmpty(fullName)) {
@@ -59,18 +61,19 @@ public class dashboard extends AppCompatActivity {
             locationForm.requestFocus();
             return;
         }
-        if (TextUtils.isEmpty(contact)) {
-            contactForm.setError("Contact is required");
-            contactForm.requestFocus();
+        if (TextUtils.isEmpty(pickUpTime)) {
+            pickUpTimeForm.setError("Pickup time is required");
+            pickUpTimeForm.requestFocus();
             return;
         }
 
-        // Using LostItem class to map the data (ItemName -> FullName, Description -> PhoneNumber)
-        LostItem booking = new LostItem(
+        // Using WashBooking class to map the data
+        WashBooking booking = new WashBooking(
                 fullName,
                 phoneNumber,
                 location,
-                contact,
+                pickUpTime,
+                instructions,
                 "pending_wash"
         );
 
@@ -89,6 +92,7 @@ public class dashboard extends AppCompatActivity {
         fullNameForm.setText("");
         phoneNumberForm.setText("");
         locationForm.setText("");
-        contactForm.setText("");
+        pickUpTimeForm.setText("");
+        instructionsForm.setText("");
     }
 }

@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase">
         <activity
+            android:name=".viewwashes"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
