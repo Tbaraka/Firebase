@@ -85,9 +85,17 @@ public class login extends AppCompatActivity {
                 progressbarLogin.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                    // Redirect to HomeActivity
-                    Intent intent = new Intent(login.this, HomeActivity.class);
-                    startActivity(intent);
+                    
+                    // Logic to differentiate Admin and User
+                    if (email.equals("admin1@gmail.com")) {
+                        // Redirect to Admin Dashboard
+                        Intent intent = new Intent(login.this, AdminDashboardActivity.class);
+                        startActivity(intent);
+                    } else {
+                        // Redirect to existing User Dashboard (HomeActivity)
+                        Intent intent = new Intent(login.this, HomeActivity.class);
+                        startActivity(intent);
+                    }
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Unsuccessful: " + (task.getException() != null ? task.getException().getMessage() : ""), Toast.LENGTH_SHORT).show();
