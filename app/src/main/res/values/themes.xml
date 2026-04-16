@@ -1,11 +1,35 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Firebase" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/design_default_color_primary</item>
-        <item name="colorPrimaryDark">@color/design_default_color_primary_variant</item>
-        <item name="colorAccent">@color/design_default_color_secondary</item>
+    <style name="Base.Theme.Firebase" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Main theme colors -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primaryLight</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
+        <item name="colorSecondary">@color/secondaryTeal</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/secondaryLight</item>
+        <item name="colorOnSecondaryContainer">@color/primaryDark</item>
+
+        <!-- Background and surface colors -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:statusBarColor">@color/primaryDark</item>
+
+        <!-- Button styles -->
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
     </style>
 
     <style name="Theme.Firebase" parent="Base.Theme.Firebase" />
+
+    <!-- Custom Button Style -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>

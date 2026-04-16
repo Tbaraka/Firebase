@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- New Theme Colors -->
+    <color name="primaryBlue">#0D47A1</color> <!-- Deep Trustworthy Blue -->
+    <color name="primaryLight">#5472D3</color>
+    <color name="primaryDark">#002171</color>
+
+    <color name="secondaryTeal">#00ACC1</color> <!-- Fresh Cyan/Teal -->
+    <color name="secondaryLight">#5DDEF4</color>
+    <color name="secondaryDark">#007C91</color>
+
+    <color name="backgroundColor">#F8F9FA</color> <!-- Light Gray Background -->
+    <color name="errorRed">#B00020</color>
 </resources>
