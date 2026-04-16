@@ -10,130 +10,136 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mama Fua Pro"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Mama Fua Pro"
+            app:titleTextColor="@color/white" />
 
-        <!-- Card 1: Schedule a New Wash -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardScheduleWash"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <LinearLayout
+            <!-- Card 1: Schedule a New Wash -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardScheduleWash"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:contentDescription="Schedule wash image"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/schedulewash" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Schedule a Wash"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/design_default_color_primary" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
 
-        <!-- Card 2: View Scheduled Washes -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewWashes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="16dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="Schedule wash image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/schedulewash" />
 
-            <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Schedule a Wash"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryBlue" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2: View Scheduled Washes -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewWashes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:layout_margin="8dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:contentDescription="View washes"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/viewwashes" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="View Scheduled Washes"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/design_default_color_primary" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
 
-        <!-- Card 3: Register as a Mamafua -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardRegisterMamafua"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="16dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="View washes"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/viewwashes" />
 
-            <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="View Scheduled Washes"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryBlue" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3: Register as a Mamafua -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRegisterMamafua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:layout_margin="8dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
 
-                <!-- Using schedulewash as placeholder since viewwashes was already used as placeholder -->
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:contentDescription="Register as Mamafua"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/registermamafua" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Register as a Mamafua"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/design_default_color_primary" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
 
+                    <!-- Using schedulewash as placeholder since viewwashes was already used as placeholder -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="Register as Mamafua"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/registermamafua" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Register as a Mamafua"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primaryBlue" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
