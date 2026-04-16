@@ -80,7 +80,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/schedulewash"
+                    android:src="@drawable/viewmamafuas"
                     android:scaleType="centerCrop"
                     android:contentDescription="Mamafua Registrations" />
 

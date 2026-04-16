@@ -3,12 +3,11 @@ package com.example.firebase;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -16,7 +15,7 @@ import java.util.Map;
 
 public class RegisterMamafuaActivity extends AppCompatActivity {
 
-    private TextInputEditText etName, etContact;
+    private EditText etName, etContact;
     private Button btnSubmit;
     private FirebaseFirestore db;
 

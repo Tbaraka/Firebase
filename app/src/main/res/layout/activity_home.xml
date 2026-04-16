@@ -83,7 +83,7 @@
                     android:layout_height="150dp"
                     android:contentDescription="View washes"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/schedulewash" />
+                    android:src="@drawable/viewwashes" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
                     android:layout_height="150dp"
                     android:contentDescription="Register as Mamafua"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/schedulewash" />
+                    android:src="@drawable/registermamafua" />
 
                 <TextView
                     android:layout_width="wrap_content"

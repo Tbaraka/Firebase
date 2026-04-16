@@ -24,32 +24,20 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="32dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/etMamafuaName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Full Name"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:inputType="text"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMamafuaName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/etMamafuaContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Phone Number"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMamafuaContact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="12dp"
+        android:hint="Phone Number "
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btnSubmitMamafua"
