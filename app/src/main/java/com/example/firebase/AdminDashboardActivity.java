@@ -53,12 +53,14 @@ public class AdminDashboardActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 int id = item.getItemId();
                 if (id == R.id.action_view_pending) {
-                    Toast.makeText(AdminDashboardActivity.this, "Viewing Pending Requests...", Toast.LENGTH_SHORT).show();
-                    // Intent to ViewRegistrationsActivity with a "pending" filter can go here
+                    Intent intent = new Intent(AdminDashboardActivity.this, ViewMamafuaRegistrationsActivity.class);
+                    intent.putExtra("status", "pending");
+                    startActivity(intent);
                     return true;
                 } else if (id == R.id.action_view_approved) {
-                    Toast.makeText(AdminDashboardActivity.this, "Viewing Approved Mamafuas...", Toast.LENGTH_SHORT).show();
-                    // Intent to ViewRegistrationsActivity with an "approved" filter can go here
+                    Intent intent = new Intent(AdminDashboardActivity.this, ViewMamafuaRegistrationsActivity.class);
+                    intent.putExtra("status", "approved");
+                    startActivity(intent);
                     return true;
                 }
                 return false;
