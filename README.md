@@ -1,6 +1,6 @@
 # Mama Fua Pro - Laundry Service App
 
-Mama Fua Pro is a modern Android application designed to bridge the gap between laundry service providers ("Mama Fua") and customers. It features a clean, professional UI and real-time data management powered by Firebase.
+Mama Fua Pro is a modern Android application designed to bridge the gap between laundry service providers "Mama Fua" and customers. powered by Firebase.
 
 ## 🚀 Key Features
 
@@ -39,7 +39,7 @@ Mama Fua Pro is a modern Android application designed to bridge the gap between 
 ## ⚙️ Installation & Setup
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/MamaFuaPro.git
+   git clone https://github.com/Tbaraka/MamaFuaPro.git
    ```
 2. **Open in Android Studio**:
    Open the project folder and let Gradle sync.
@@ -57,5 +57,3 @@ Mama Fua Pro is a modern Android application designed to bridge the gap between 
 - [ ] GPS-based location services for automated pickup addresses.
 - [ ] Rating and review system for Mamafuas.
 
-## 📄 License
-Distributed under the MIT License.
