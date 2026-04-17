@@ -1,42 +1,42 @@
 # Mama Fua Pro - Laundry Service App
 
-Mama Fua Pro is an Android application designed to bridge the gap between laundry service providers ("Mama Fua") and customers. It allows users to easily book laundry services, provide specific instructions, and manage their bookings through a simple, user-friendly interface powered by Firebase.
+Mama Fua Pro is a modern Android application designed to bridge the gap between laundry service providers ("Mama Fua") and customers. It features a clean, professional UI and real-time data management powered by Firebase.
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **User Authentication**: Secure sign-up and login system using Firebase Authentication.
-- **Service Booking**: A detailed booking form where users can provide:
-  - Full Name
-  - Phone Number
-  - Pickup Location
-  - Preferred Pickup Time
-  - Special Instructions (e.g., "Hand wash only", "No bleach")
-- **Booking Management**:
-  - Customers can schedule new washes from the home dashboard.
-  - Admins can view all incoming wash requests in a real-time list.
-- **Status Tracking**: Bookings are initialized with a "pending_wash" status.
-- **Dynamic Menu**: A reusable options menu for quick access to "Contact Us", "Admin Login", and "Logout".
+### For Customers
+- **User Authentication**: Secure sign-up and login using Firebase Authentication.
+- **Service Booking**: Detailed forms to schedule laundry with pickup location, preferred time, and special instructions.
+- **Mamafua Registration**: A dedicated portal for service providers to join the team.
+- **Booking History**: View and track your scheduled washes.
+
+### For Admins
+- **Manage Appointments**: View all incoming laundry requests in real-time.
+- **Mamafua Onboarding**: Review, filter (Pending/Approved), and approve new Mamafua registrations directly from the Admin Dashboard.
+- **Status Tracking**: Manage the lifecycle of requests from "pending" to "approved".
+
+## 🎨 Design & Theme
+- **Fresh & Clean Aesthetic**: A professional palette of **Deep Blue** (trustworthy) and **Fresh Teal** (cleanliness) using Material 3 components.
+- **Responsive UI**: Card-based navigation on the home screen with high-quality visual cues.
+- **Consistent Forms**: Uniform input fields and button styles across the entire application for a seamless user experience.
 
 ## 🛠️ Technologies Used
-
 - **Language**: Java
-- **UI Framework**: Android XML with Material Design & AppCompat
+- **UI Framework**: Android XML with Material 3 Design
 - **Database**: Google Firebase Firestore (NoSQL)
 - **Authentication**: Firebase Auth
-- **Components**: RecyclerView, CardView, Toolbar, and custom Adapters.
+- **Components**: RecyclerView, CardView, MaterialToolbar, and custom PopupMenus.
 
 ## 📂 Project Structure
-
-- `signup.java` / `login.java`: Handles user onboarding.
-- `HomeActivity.java`: The main landing page for customers.
-- `dashboard.java`: The booking interface for scheduling laundry.
-- `WashBooking.java`: The data model representing a laundry request.
-- `viewwashes.java`: The admin dashboard to view all bookings.
-- `washadapter.java`: Custom adapter to display bookings in a list format.
-- `newUserOption.java`: A base class to handle shared menu logic across activities.
+- `HomeActivity.java`: Main customer landing page with service cards.
+- `AdminDashboardActivity.java`: Central hub for administrative tasks.
+- `RegisterMamafuaActivity.java`: Form for service providers to apply.
+- `ViewMamafuaRegistrationsActivity.java`: Admin view to filter and approve applicants.
+- `dashboard.java`: Customer booking interface.
+- `viewwashes.java`: Real-time list of all laundry appointments.
+- `newUserOption.java`: Base class for shared menu logic (Contact, Admin Login, Logout).
 
 ## ⚙️ Installation & Setup
-
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/MamaFuaPro.git
@@ -44,21 +44,18 @@ Mama Fua Pro is an Android application designed to bridge the gap between laundr
 2. **Open in Android Studio**:
    Open the project folder and let Gradle sync.
 3. **Connect to Firebase**:
-   - Create a new project in the [Firebase Console](https://console.firebase.google.com/).
+   - Create a project in the [Firebase Console](https://console.firebase.google.com/).
    - Add your Android app package name (`com.example.firebase`).
-   - Download the `google-services.json` file and place it in the `app/` directory.
-   - Enable **Email/Password** Authentication.
-   - Create a **Cloud Firestore** database in test mode.
+   - Place `google-services.json` in the `app/` directory.
+   - Enable **Email/Password** Authentication and **Cloud Firestore**.
 4. **Build and Run**:
-   Click the "Run" button in Android Studio to install the app on your emulator or physical device.
+   Install the app on your emulator or physical device via Android Studio.
 
 ## 📋 Future Enhancements
-
 - [ ] Push notifications for booking status updates.
-- [ ] In-app payment integration (M-Pesa/Card).
-- [ ] User profile editing.
-- [ ] Location services (GPS) for automated pickup addresses.
+- [ ] M-Pesa/Card payment integration.
+- [ ] GPS-based location services for automated pickup addresses.
+- [ ] Rating and review system for Mamafuas.
 
 ## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License.
