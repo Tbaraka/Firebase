@@ -2,7 +2,7 @@
 
 Mama Fua Pro is a modern Android application designed to bridge the gap between laundry service providers "Mama Fua" and customers. powered by Firebase.
 
-## 🚀 Key Features
+##Key Features
 
 ### For Customers
 - **User Authentication**: Secure sign-up and login using Firebase Authentication.
@@ -15,19 +15,19 @@ Mama Fua Pro is a modern Android application designed to bridge the gap between 
 - **Mamafua Onboarding**: Review, filter (Pending/Approved), and approve new Mamafua registrations directly from the Admin Dashboard.
 - **Status Tracking**: Manage the lifecycle of requests from "pending" to "approved".
 
-## 🎨 Design & Theme
+## Design & Theme
 - **Fresh & Clean Aesthetic**: A professional palette of **Deep Blue** (trustworthy) and **Fresh Teal** (cleanliness) using Material 3 components.
 - **Responsive UI**: Card-based navigation on the home screen with high-quality visual cues.
 - **Consistent Forms**: Uniform input fields and button styles across the entire application for a seamless user experience.
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **Language**: Java
 - **UI Framework**: Android XML with Material 3 Design
 - **Database**: Google Firebase Firestore (NoSQL)
 - **Authentication**: Firebase Auth
 - **Components**: RecyclerView, CardView, MaterialToolbar, and custom PopupMenus.
 
-## 📂 Project Structure
+## Project Structure
 - `HomeActivity.java`: Main customer landing page with service cards.
 - `AdminDashboardActivity.java`: Central hub for administrative tasks.
 - `RegisterMamafuaActivity.java`: Form for service providers to apply.
@@ -36,7 +36,7 @@ Mama Fua Pro is a modern Android application designed to bridge the gap between 
 - `viewwashes.java`: Real-time list of all laundry appointments.
 - `newUserOption.java`: Base class for shared menu logic (Contact, Admin Login, Logout).
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Tbaraka/MamaFuaPro.git
@@ -51,7 +51,7 @@ Mama Fua Pro is a modern Android application designed to bridge the gap between 
 4. **Build and Run**:
    Install the app on your emulator or physical device via Android Studio.
 
-## 📋 Future Enhancements
+## Future Enhancements
 - [ ] Push notifications for booking status updates.
 - [ ] M-Pesa/Card payment integration.
 - [ ] GPS-based location services for automated pickup addresses.
