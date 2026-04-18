@@ -16,6 +16,9 @@
         <item name="android:windowBackground">@color/backgroundColor</item>
         <item name="android:statusBarColor">@color/primaryDark</item>
 
+        <!-- Font style -->
+        <item name="fontFamily">sans-serif-medium</item>
+
         <!-- Button styles -->
         <item name="materialButtonStyle">@style/Widget.App.Button</item>
     </style>
@@ -27,6 +30,9 @@
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">

@@ -39,7 +39,7 @@ public class viewwashes extends newUserOption {
         adapter = new washadapter(list);
         recyclerView.setAdapter(adapter);
 
-        // Handle window insets for EdgeToEdge
+        // Handle window insets for EdgeTo
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

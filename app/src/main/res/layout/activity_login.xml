@@ -8,41 +8,62 @@
     tools:context=".login"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="@color/backgroundColor">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="24sp"
+        android:text="Welcome to Mamafua Pro"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:textSize="26sp"
+        android:textColor="@color/primaryBlue"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"/>
-    <!-- Edit text for email -->
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to continue"
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
     <EditText
         android:id="@+id/loginemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your Email" />
-    <!-- Edit text for password -->
+        android:hint="Enter your Email"
+        android:layout_marginBottom="12dp"
+        android:padding="16dp"
+        android:background="@drawable/whiteclearbackground"/>
+
     <EditText
         android:id="@+id/loginpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your Password"
-        android:inputType="textPassword" />
-    <!-- Button for Login with text "Login" -->
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="@drawable/whiteclearbackground"/>
+
     <Button
         android:id="@+id/buttonlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
-    <!-- ProgressBar for Loading Time -->
+        android:text="Login"
+        android:padding="12dp" />
+
     <ProgressBar
         android:id="@+id/progressBarLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/textViewSignup"
@@ -50,8 +71,9 @@
         android:layout_height="wrap_content"
         android:text="Don't have an account? Sign Up"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/secondaryDark"
+        android:textStyle="bold"
         android:clickable="true"
         android:focusable="true" />
 

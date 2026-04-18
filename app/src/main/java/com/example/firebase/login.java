@@ -92,7 +92,7 @@ public class login extends AppCompatActivity {
                         Intent intent = new Intent(login.this, AdminDashboardActivity.class);
                         startActivity(intent);
                     } else {
-                        // Redirect to existing User Dashboard (HomeActivity)
+                        // Redirect to existing User Dashboard
                         Intent intent = new Intent(login.this, HomeActivity.class);
                         startActivity(intent);
                     }

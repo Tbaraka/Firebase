@@ -5,53 +5,76 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".signup"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
-    tools:context=".signup">
+    android:gravity="center_vertical"
+    android:padding="24dp"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textSize="24sp"
+        android:text="Join Mamafua Pro"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
-        />
-    <EditText
-        android:layout_width="match_parent"
+        android:letterSpacing="0.02"
+        android:textSize="26sp"
+        android:textColor="@color/primaryBlue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:text="Create an account to start"
+        android:textColor="#757575"
+        android:textSize="16sp" />
+
+    <EditText
         android:id="@+id/email"
-        android:hint="Enter your email"
-        android:inputType="textEmailAddress"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Enter your Email"
+        android:layout_marginBottom="12dp"
+        android:padding="16dp"
+        android:background="@drawable/whiteclearbackground"/>
+
+    <EditText
         android:id="@+id/password"
-        android:hint="Enter your password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Password"
         android:inputType="textPassword"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="@drawable/whiteclearbackground"/>
+
     <Button
         android:id="@+id/registerbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        android:layout_marginTop="24dp"
-        />
+        android:padding="12dp" />
+
     <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
     <TextView
         android:id="@+id/loginRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account? Login here"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/holo_blue_dark"
-        />
+        android:text="Already have an account? Login"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/secondaryDark"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
 
 </LinearLayout>
